@@ -1,0 +1,17 @@
+CDN = Content Delivery Network
+src in the head tag has import the the https://unpkg.com.react@17/umd/react.development.js
+in this way, it is a quick way to add the react library to your webpage!
+
+Notice: the CDN link is not supported when I practiced the code! So I change it to version @18, works
+however the err from console showing I  need to use new method createRoot() is a method from
+ReactDOM but createElement() is from React.
+
+
+A good list example added into the render property showing createElement will make the code hard to
+read, so it is time to get the idea of JSX, but the new added syntax is not supported by the browser.
+We need to introduce the new thing called Babel.
+1. import new CDN resource to use Babel
+2. change the text/javascript into text/babel
+
+JSX expression{val_name}
+Notice ONLY ONE html tag can be used!

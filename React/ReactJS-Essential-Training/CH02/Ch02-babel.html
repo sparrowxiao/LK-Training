@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+        <title>React Essential Training</title>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            let greeting = 'Getting Started with React';
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(
+                <h1>{greeting.toUpperCase()}</h1>
+            );
+        </script>
+    </body>
+</html>
