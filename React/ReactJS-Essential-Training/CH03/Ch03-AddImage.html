@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+        <title>React Essential Training</title>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            function Header(props){
+                return(<header>
+                    <h1>{props.name}'s Kitchen</h1>
+                </header>);
+            }
+            function Main(props){
+                return(
+                    <section>
+                        <p>we serve delicious {props.description} food here</p>
+                        <img 
+                        height={200}
+                        src="./pexels-alex-green.jpg"
+                        alt="homemade sphagetti"/>
+                        <ul>
+                            {props.dishes.map((dish)=>(
+                                <li key={dish.id}>{dish.title}</li>
+                            ))}
+                        </ul>
+                    </section>
+                );
+            }
+            function Footer(props){
+                return(
+                    <footer>
+                        <p>Copyright {props.year}</p>
+                    </footer>
+                );
+            }
+
+            const regularDishes=[
+                "Slow Roast Crispy Pork Belly",
+                "Special Sour Spicy Fish Fillet",
+                "Nacaroni and Cheese",
+                "Shrimp Garlic Sphagetti"
+            ];
+            const dishObjs=regularDishes.map(
+                (dish,i)=>({
+                    id:i,
+                    title:dish
+                })
+            );
+            function App(){
+                return(
+                    <React.Fragment>
+                        <Header name="Ting" />
+                        <Main description="homemade" dishes={dishObjs}/>
+                        <Footer year={new Date().getFullYear()} />
+                    </React.Fragment>
+                );
+            }
+            let greeting = 'Getting Started with React';
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(
+                <App />
+            );
+        </script>
+    </body>
+</html>

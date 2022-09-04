@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+        <title>React Essential Training</title>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            function Header(props){
+                return(<header>
+                    <h1>{props.name}'s Kitchen</h1>
+                </header>);
+            }
+            function Main(props){
+                return(
+                    <section>
+                        <p>we server good {props.description} food here</p>
+                    </section>
+                );
+            }
+            function Footer(props){
+                return(
+                    <footer>
+                        <p>Copyright {props.year}</p>
+                    </footer>
+                );
+            }
+            
+            function App(){
+                return(
+                    <div>
+                        <Header name="Ting"/>
+                        <Main description="Homemade delicious"/>
+                        <Footer year={new Date().getFullYear()} />
+                    </div>
+                );
+            }
+            let greeting = 'Getting Started with React';
+            const root = ReactDOM.createRoot(document.getElementById('root'));
+            root.render(
+                <App />
+            );
+        </script>
+    </body>
+</html>
