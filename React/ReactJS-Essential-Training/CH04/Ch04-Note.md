@@ -1,4 +1,4 @@
-*Create React App Porject
+* Create React App Porject
     1. Update my local brew/node/npm version
     2. npm v > 5 then can use npx command
     3. create a react app
