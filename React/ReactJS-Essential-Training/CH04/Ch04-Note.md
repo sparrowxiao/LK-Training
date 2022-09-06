@@ -15,3 +15,16 @@
 ### 4. The useState Hook
 * Is more easier way to destructure the objs, and also can keep code clean and we don't need to set property from outside of the component.
 * `import {useState} from "react"`
+### 5. The useEffect Hook
+* `import {useEffect} from "react"`
+* It is a kind of side effect happened along side with the render.
+* Can specify the when this side effect can happen
+* The second parameter is set as empty array, can tell this function will not be called once after page **first render**.
+  `useEffect(()=>{
+    console.log(`it is first emotion changed into ${emotion}`);
+  },[]);`
+### 6. Understanding the dependency array in the useEffect Hook
+* Comment out the code in JSX: `{/* A JSX comment */}`
+* `import {useEffect} from "react"`
+
+
